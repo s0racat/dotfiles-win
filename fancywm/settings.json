@@ -7,7 +7,7 @@
   "AutoCollapsePanels": true,
   "AutoSplitCount": 2,
   "DelayReposition": false,
-  "AnimateWindowMovement": true,
+  "AnimateWindowMovement": false,
   "ModifierMoveWindow": true,
   "ModifierMoveWindowAutoFocus": true,
   "WindowPadding": 8,
