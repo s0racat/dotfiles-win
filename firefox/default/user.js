@@ -27,6 +27,6 @@ user_pref("sidebar.verticalTabs", true);
 user_pref("signon.rememberSignons", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.enabled", false);
-
+user_pref("browser.tabs.inTitlebar", 0);
 
 
