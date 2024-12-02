@@ -23,10 +23,10 @@ user_pref("network.captive-portal-service.enabled", false);
 user_pref("privacy.sanitize.useOldClearHistoryDialog", true);
 user_pref("privacy.trackingprotection.enabled", true);
 user_pref("sidebar.revamp", true);
-user_pref("sidebar.verticalTabs", true);
+// FancyWM shows "The window cannot be resized to fit"
+// user_pref("sidebar.verticalTabs", true);
 user_pref("signon.rememberSignons", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.enabled", false);
-user_pref("browser.tabs.inTitlebar", 0);
 
 
