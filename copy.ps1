@@ -22,4 +22,4 @@ Copy-ItemWithDirs .\windows-terminal\settings.json $env:localappdata\Packages\Mi
 Copy-ItemWithDirs .\fancywm\settings.json $env:localappdata\Packages\2203VeselinKaraganev.FancyWM_9x2ndwrcmyd2c\LocalCache\Roaming\FancyWM\settings.json
 Copy-ItemWithDirs .\wezterm\wezterm.lua $env:USERPROFILE\.wezterm.lua
 Copy-ItemWithDirs .\firefox\profiles.ini $env:appdata\Mozilla\Firefox\profiles.ini
-Copy-ItemWithDirs -Recurse .\firefox\default $env:appdata\Mozilla\Firefox\Profiles
+Copy-ItemWithDirs -Recurse .\firefox\default\* $env:appdata\Mozilla\Firefox\Profiles\default
