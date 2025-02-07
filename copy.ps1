@@ -11,9 +11,9 @@ function Copy-ItemWithDirs {
     }
     
     if ($Recurse) {
-        Copy-Item -Verbose -Recurse $Source -Destination $Destination
+        Copy-Item -Verbose -Recurse -Path $Source -Destination $Destination
     } else {
-        Copy-Item -Verbose $Source -Destination $Destination
+        Copy-Item -Verbose -Path $Source -Destination $Destination
     }
 }
 
