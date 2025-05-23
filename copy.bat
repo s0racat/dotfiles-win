@@ -4,5 +4,7 @@ echo F | xcopy /i /e /y .\fancywm\settings.json %localappdata%\Packages\2203Vese
 echo F | xcopy /i /e /y .\wezterm\wezterm.lua %USERPROFILE%\.wezterm.lua
 echo F | xcopy /i /e /y .\firefox\profiles.ini %appdata%\Mozilla\Firefox\profiles.ini
 xcopy /i /e /y .\firefox\default\* %appdata%\Mozilla\Firefox\Profiles\default
+xcopy /i /e /y zebar\a %userprofile%\.glzr\zebar\a
+echo F | xcopy /i /e /y glazewm\config.yaml %userprofile%\.glzr\glazewm\config.yaml
 
 pause
