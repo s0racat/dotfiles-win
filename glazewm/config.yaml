@@ -149,12 +149,15 @@ window_rules:
         window_class: { regex: "HwndWrapper" }
 
       - window_process: { equals: "KeePassXC" }
-        window_title: { regex: ".*? - KeePassXC" }
+        window_title: { regex: ".*? - KeePassXC|KeePassXC" }
 
       - window_process: { equals: "explorer" }
         window_title: { equals: "ファイル名を指定して実行" }
 
       - window_title: { equals: "コマンド パレット" }
+
+      - window_process: { equals: "StrokesPlus" }
+        window_title: { equals: "Console" }
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
