@@ -166,6 +166,8 @@ window_rules:
 
       - window_process: { equals: "StrokesPlus" }
         window_title: { equals: "Console" }
+      - window_process: { equals: "VirtualBoxVM" }
+        window_title: { equals: "仮想マシンを閉じる" }
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
@@ -184,14 +186,23 @@ binding_modes:
 
 keybindings:
   # Shift focus in a given direction.
+  # - commands: ["focus --direction left"]
+  #   bindings: ["alt+h", "alt+left"]
+  # - commands: ["focus --direction right"]
+  #   bindings: ["alt+l", "alt+right"]
+  # - commands: ["focus --direction up"]
+  #   bindings: ["alt+k", "alt+up"]
+  # - commands: ["focus --direction down"]
+  #   bindings: ["alt+j", "alt+down"]
+
   - commands: ["focus --direction left"]
-    bindings: ["alt+h", "alt+left"]
+    bindings: ["alt+h"]
   - commands: ["focus --direction right"]
-    bindings: ["alt+l", "alt+right"]
+    bindings: ["alt+l"]
   - commands: ["focus --direction up"]
-    bindings: ["alt+k", "alt+up"]
+    bindings: ["alt+k"]
   - commands: ["focus --direction down"]
-    bindings: ["alt+j", "alt+down"]
+    bindings: ["alt+j"]
 
   # Move focused window in a given direction.
   - commands: ["move --direction left"]
