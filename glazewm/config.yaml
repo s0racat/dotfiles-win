@@ -121,6 +121,7 @@ window_behavior:
 
 workspaces:
   - name: "1"
+    bind_to_monitor: 0
   - name: "2"
   - name: "3"
   - name: "4"
@@ -168,6 +169,10 @@ window_rules:
         window_title: { equals: "Console" }
       - window_process: { equals: "VirtualBoxVM" }
         window_title: { equals: "仮想マシンを閉じる" }
+
+      - window_process: { equals: "VeraCrypt" }
+
+      - window_process: { equals: "MSPCManager" }
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
