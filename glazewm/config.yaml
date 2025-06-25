@@ -222,7 +222,7 @@ window_rules:
       - window_process: { equals: "chrome" }
 
 # PowerToys:
-# Muhenkan -> Num Lock
+# Muhenkan -> Print Screen
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
@@ -242,158 +242,158 @@ binding_modes:
 keybindings:
   # Shift focus in a given direction.
   # - commands: ["focus --direction left"]
-  #   bindings: ["num_lock+h", "num_lock+left"]
+  #   bindings: ["print_screen+h", "print_screen+left"]
   # - commands: ["focus --direction right"]
-  #   bindings: ["num_lock+l", "num_lock+right"]
+  #   bindings: ["print_screen+l", "print_screen+right"]
   # - commands: ["focus --direction up"]
-  #   bindings: ["num_lock+k", "num_lock+up"]
+  #   bindings: ["print_screen+k", "print_screen+up"]
   # - commands: ["focus --direction down"]
-  #   bindings: ["num_lock+j", "num_lock+down"]
+  #   bindings: ["print_screen+j", "print_screen+down"]
 
   - commands: ["focus --direction left"]
-    bindings: ["num_lock+h"]
+    bindings: ["print_screen+h"]
   - commands: ["focus --direction right"]
-    bindings: ["num_lock+l"]
+    bindings: ["print_screen+l"]
   - commands: ["focus --direction up"]
-    bindings: ["num_lock+k"]
+    bindings: ["print_screen+k"]
   - commands: ["focus --direction down"]
-    bindings: ["num_lock+j"]
+    bindings: ["print_screen+j"]
 
   # Move focused window in a given direction.
   - commands: ["move --direction left"]
-    bindings: ["num_lock+shift+h", "num_lock+shift+left"]
+    bindings: ["print_screen+shift+h", "print_screen+shift+left"]
   - commands: ["move --direction right"]
-    bindings: ["num_lock+shift+l", "num_lock+shift+right"]
+    bindings: ["print_screen+shift+l", "print_screen+shift+right"]
   - commands: ["move --direction up"]
-    bindings: ["num_lock+shift+k", "num_lock+shift+up"]
+    bindings: ["print_screen+shift+k", "print_screen+shift+up"]
   - commands: ["move --direction down"]
-    bindings: ["num_lock+shift+j", "num_lock+shift+down"]
+    bindings: ["print_screen+shift+j", "print_screen+shift+down"]
 
   # Resize focused window by a percentage or pixel amount.
   - commands: ["resize --width -2%"]
-    bindings: ["num_lock+u"]
+    bindings: ["print_screen+u"]
   - commands: ["resize --width +2%"]
-    bindings: ["num_lock+p"]
+    bindings: ["print_screen+p"]
   - commands: ["resize --height +2%"]
-    bindings: ["num_lock+o"]
+    bindings: ["print_screen+o"]
   - commands: ["resize --height -2%"]
-    bindings: ["num_lock+i"]
+    bindings: ["print_screen+i"]
 
-  # As an num_lockernative to the resize keybindings above, resize mode enables
+  # As an print_screenernative to the resize keybindings above, resize mode enables
   # resizing via arrow keys or HJKL. The binding mode is defined above with
   # the name 'resize'.
   - commands: ["wm-enable-binding-mode --name resize"]
-    bindings: ["num_lock+r"]
+    bindings: ["print_screen+r"]
 
-  # Disables window management and all other keybindings until num_lock+shift+p
+  # Disables window management and all other keybindings until print_screen+shift+p
   # is pressed again.
   - commands: ["wm-toggle-pause"]
-    bindings: ["num_lock+shift+p"]
+    bindings: ["print_screen+shift+p"]
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
   - commands: ["toggle-tiling-direction"]
-    bindings: ["num_lock+v"]
+    bindings: ["print_screen+v"]
 
   # Change focus from tiling windows -> floating -> fullscreen.
   # - commands: ["wm-cycle-focus"]
-  # bindings: ["num_lock+shift+space"]
+  # bindings: ["print_screen+shift+space"]
 
   # Change the focused window to be floating.
   - commands: ["toggle-floating --centered"]
-    bindings: ["num_lock+shift+space"]
+    bindings: ["print_screen+shift+space"]
 
   # Change the focused window to be tiling.
   - commands: ["toggle-tiling"]
-    bindings: ["num_lock+t"]
+    bindings: ["print_screen+t"]
 
   # Change the focused window to be fullscreen.
   - commands: ["toggle-fullscreen"]
-    bindings: ["num_lock+f"]
+    bindings: ["print_screen+f"]
 
   # Minimize focused window.
   - commands: ["toggle-minimized"]
-    bindings: ["num_lock+m"]
+    bindings: ["print_screen+m"]
 
   # Close focused window.
   - commands: ["close"]
-    bindings: ["num_lock+q"]
+    bindings: ["print_screen+q"]
 
   # Kill GlazeWM process safely.
   - commands: ["wm-exit"]
-    bindings: ["num_lock+shift+e"]
+    bindings: ["print_screen+shift+e"]
 
   # Re-evaluate configuration file.
   - commands: ["wm-reload-config"]
-    bindings: ["num_lock+shift+r"]
+    bindings: ["print_screen+shift+r"]
 
   # Redraw all windows.
   - commands: ["wm-redraw"]
-    bindings: ["num_lock+shift+w"]
+    bindings: ["print_screen+shift+w"]
 
-  # Launch CMD terminal. num_lockernatively, use `shell-exec wt` or
+  # Launch CMD terminal. print_screenernatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
   - commands: ["shell-exec wt"]
-    bindings: ["num_lock+enter"]
+    bindings: ["print_screen+enter"]
 
   # Focus the next/previous active workspace defined in `workspaces` config.
   - commands: ["focus --next-workspace"]
-    bindings: ["num_lock+s"]
+    bindings: ["print_screen+s"]
   - commands: ["focus --prev-workspace"]
-    bindings: ["num_lock+a"]
+    bindings: ["print_screen+a"]
 
   # Focus the workspace that last had focus.
   - commands: ["focus --recent-workspace"]
-    bindings: ["num_lock+d"]
+    bindings: ["print_screen+d"]
 
   # Change focus to a workspace defined in `workspaces` config.
   - commands: ["focus --workspace 1"]
-    bindings: ["num_lock+1"]
+    bindings: ["print_screen+1"]
   - commands: ["focus --workspace 2"]
-    bindings: ["num_lock+2"]
+    bindings: ["print_screen+2"]
   - commands: ["focus --workspace 3"]
-    bindings: ["num_lock+3"]
+    bindings: ["print_screen+3"]
   - commands: ["focus --workspace 4"]
-    bindings: ["num_lock+4"]
+    bindings: ["print_screen+4"]
   - commands: ["focus --workspace 5"]
-    bindings: ["num_lock+5"]
+    bindings: ["print_screen+5"]
   - commands: ["focus --workspace 6"]
-    bindings: ["num_lock+6"]
+    bindings: ["print_screen+6"]
   - commands: ["focus --workspace 7"]
-    bindings: ["num_lock+7"]
+    bindings: ["print_screen+7"]
   - commands: ["focus --workspace 8"]
-    bindings: ["num_lock+8"]
+    bindings: ["print_screen+8"]
   - commands: ["focus --workspace 9"]
-    bindings: ["num_lock+9"]
+    bindings: ["print_screen+9"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
   - commands: ["move-workspace --direction left"]
-    bindings: ["num_lock+shift+a"]
+    bindings: ["print_screen+shift+a"]
   - commands: ["move-workspace --direction right"]
-    bindings: ["num_lock+shift+f"]
+    bindings: ["print_screen+shift+f"]
   - commands: ["move-workspace --direction up"]
-    bindings: ["num_lock+shift+d"]
+    bindings: ["print_screen+shift+d"]
   - commands: ["move-workspace --direction down"]
-    bindings: ["num_lock+shift+s"]
+    bindings: ["print_screen+shift+s"]
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move --workspace 1"]
-    bindings: ["num_lock+shift+1"]
+    bindings: ["print_screen+shift+1"]
   - commands: ["move --workspace 2"]
-    bindings: ["num_lock+shift+2"]
+    bindings: ["print_screen+shift+2"]
   - commands: ["move --workspace 3"]
-    bindings: ["num_lock+shift+3"]
+    bindings: ["print_screen+shift+3"]
   - commands: ["move --workspace 4"]
-    bindings: ["num_lock+shift+4"]
+    bindings: ["print_screen+shift+4"]
   - commands: ["move --workspace 5"]
-    bindings: ["num_lock+shift+5"]
+    bindings: ["print_screen+shift+5"]
   - commands: ["move --workspace 6"]
-    bindings: ["num_lock+shift+6"]
+    bindings: ["print_screen+shift+6"]
   - commands: ["move --workspace 7"]
-    bindings: ["num_lock+shift+7"]
+    bindings: ["print_screen+shift+7"]
   - commands: ["move --workspace 8"]
-    bindings: ["num_lock+shift+8"]
+    bindings: ["print_screen+shift+8"]
   - commands: ["move --workspace 9"]
-    bindings: ["num_lock+shift+9"]
+    bindings: ["print_screen+shift+9"]
