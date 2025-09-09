@@ -26,6 +26,8 @@ user_pref("privacy.trackingprotection.enabled", true);
 //user_pref("sidebar.revamp", true);
 // システムのスケールが125%以上の場合にfalseに
 //user_pref("sidebar.verticalTabs", true);
+// move sidebar to Right
+user_pref("sidebar.position_start", false);
 user_pref("signon.rememberSignons", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.enabled", false);
