@@ -1,12 +1,14 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.38/schema.bar.json",
   "monitor": 0,
-  "font_family": "PlemolJP Console NF",
+  "font_family": "NOTONOTO Console",
   "font_size": 13,
   "theme": {
     "palette": "Base16",
     "name": "Nord",
-    "accent": "Base0D"
+    "accent": "Base0C",
+    "auto_select_fill": "Base0C",
+    "auto_select_text": "Base06"
   },
   "height": 30,
   "left_widgets": [
