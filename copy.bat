@@ -10,6 +10,11 @@ echo  F|xcopy   /i  /e  /y  komorebi\applications.json %userprofile%
 echo  F|xcopy   /i  /e  /y  komorebi\komorebi.json %userprofile%
 echo  F|xcopy   /i  /e  /y  komorebi\komorebi.bar.json %userprofile%
 echo  F|xcopy   /i  /e  /y  komorebi\whkdrc %userprofile%\.config
+echo  F|xcopy   /i  /e  /y  alacritty\alacritty.toml %appdata%\alacritty\alacritty.toml
+
+echo  F|xcopy   /i  /e  /y  powershell\Microsoft.PowerShell_profile.ps1 %userprofile%\Documents\WindowsPowerShell
+echo  F|xcopy   /i  /e  /y  powershell\Microsoft.PowerShell_profile.ps1 %userprofile%\Documents\PowerShell
+
 
 
 pause

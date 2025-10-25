@@ -2,6 +2,8 @@
   "$help": "https://aka.ms/terminal-documentation",
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "actions": [],
+  "alwaysShowTabs": false,
+  "autoHideWindow": false,
   "copyFormatting": "none",
   "copyOnSelect": false,
   "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -64,16 +66,16 @@
         "guid": "{4a04b435-e7ad-53a5-bfe5-a87203cc7d78}",
         "hidden": true,
         "name": "Ubuntu",
-        "source": "Microsoft.WSL",
-        "pathTranslationStyle": "wsl"
+        "pathTranslationStyle": "wsl",
+        "source": "Microsoft.WSL"
       },
       {
         "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
         "hidden": true,
         "icon": null,
         "name": "Ubuntu",
-        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc",
-        "pathTranslationStyle": "wsl"
+        "pathTranslationStyle": "wsl",
+        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
       },
       {
         "commandline": "%SystemRoot%\\System32\\wsl.exe -d Ubuntu --cd ~ tmux attach || tmux",
@@ -109,5 +111,8 @@
       "yellow": "#EBCB8B"
     }
   ],
+  "showTabsFullscreen": false,
+  "showTabsInTitlebar": false,
+  "tabWidthMode": "compact",
   "themes": []
 }

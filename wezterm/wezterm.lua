@@ -14,8 +14,8 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = 'nord'
---config.font = wezterm.font 'UDEV Gothic 35NFLG'
--- config.font_size = 11.5
+config.font = wezterm.font 'PlemolJP Console NF'
+config.font_size = 13.5
 --config.use_ime = false
 -- config.enable_tab_bar = false
 config.tab_bar_at_bottom = true
@@ -27,6 +27,40 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+config.mux_enable_ssh_agent = false
+
+config.hyperlink_rules = {
+
+	-- Linkify things that look like URLs and the host has a TLD name.
+	-- Compiled-in default. Used if you don't specify any hyperlink_rules.
+	{
+		regex = '\\b\\w+://[\\w.-]+\\.[a-z]{2,15}\\S*\\b',
+		format = '$0',
+	},
+
+	-- linkify email addresses
+	-- Compiled-in default. Used if you don't specify any hyperlink_rules.
+	{
+		regex = [[\b\w+@[\w-]+(\.[\w-]+)+\b]],
+		format = 'mailto:$0',
+	},
+
+	-- file:// URI
+	-- Compiled-in default. Used if you don't specify any hyperlink_rules.
+	{
+		regex = [[\bfile://\S*\b]],
+		format = '$0',
+	},
+
+	-- Linkify things that look like URLs with numeric addresses as hosts.
+	-- E.g. http://127.0.0.1:8000 for a local development server,
+	-- or http://192.168.1.1 for the web interface of many routers.
+	{
+		regex = [[\b\w+://(?:[\d]{1,3}\.){3}[\d]{1,3}\S*\b]],
+		format = '$0',
+	},
+}
+
 
 config.use_fancy_tab_bar = false
 config.colors = {
@@ -75,6 +109,14 @@ config.colors = {
 	}
 }
 
+config.mouse_bindings = {
+	-- Ctrl-click will open the link under the mouse cursor
+	{
+		event = { Up = { streak = 1, button = 'Left' } },
+		mods = 'CTRL',
+		action = wezterm.action.OpenLinkAtMouseCursor,
+	},
+}
 config.keys = {
 	{ key = "[", mods = "LEADER", action = wezterm.action.ActivateCopyMode },
 	{ key = 'p', mods = 'LEADER', action = wezterm.action.ActivateTabRelative(-1) },
@@ -112,11 +154,11 @@ config.keys = {
 	{ key = "c", mods = "LEADER", action = wezterm.action { SpawnTab = "CurrentPaneDomain" } },
 	{ key = 'L', mods = 'CTRL',   action = wezterm.action.ShowDebugOverlay },
 }
-config.unix_domains = {
-	{
-		name = 'unix',
-	},
-}
+-- config.unix_domains = {
+-- 	{
+-- 		name = 'unix',
+-- 	},
+-- }
 
 -- This causes `wezterm` to act as though it was started as
 -- `wezterm connect unix` by default, connecting to the unix
@@ -149,7 +191,67 @@ config.inactive_pane_hsb = {
 -- the current directory colored in the prompt.
 --	SSH_AUTH_SOCK = os.getenv('XDG_RUNTIME_DIR') .. '/gcr/ssh'
 --}
-config.default_domain = "WSL:Debian"
+config.wsl_domains = {
+	{
+		-- The name of this specific domain.  Must be unique amonst all types
+		-- of domain in the configuration file.
+		name = 'WSL:Ubuntu',
+
+		-- The name of the distribution.  This identifies the WSL distribution.
+		-- It must match a valid distribution from your `wsl -l -v` output in
+		-- order for the domain to be useful.
+		distribution = 'Ubuntu',
+
+		-- The username to use when spawning commands in the distribution.
+		-- If omitted, the default user for that distribution will be used.
+
+		-- username = "hunter",
+
+		-- The current working directory to use when spawning commands, if
+		-- the SpawnCommand doesn't otherwise specify the directory.
+
+		default_cwd = "~"
+		-- The default command to run, if the SpawnCommand doesn't otherwise
+		-- override it.  Note that you may prefer to use `chsh` to set the
+		-- default shell for your user inside WSL to avoid needing to
+		-- specify it here
+
+		-- default_prog = {"fish"}
+	},
+}
+
+config.launch_menu = {
+	{
+		label = 'cmd.exe',
+		domain = { DomainName = 'local' },
+		args = { 'cmd.exe' },
+
+	},
+	{
+		label = 'PowerShell',
+		domain = { DomainName = 'local' },
+		args = { 'powershell.exe', '-NoLogo', },
+
+	},
+	{
+		label = 'PowerShell 7',
+		domain = { DomainName = 'local' },
+		args = { 'pwsh.exe', '-NoLogo', },
+
+	},
+	{
+		label = 'Git Bash',
+		domain = { DomainName = 'local' },
+		args = { os.getenv("USERPROFILE") .. '\\scoop\\apps\\git\\current\\bin\\bash.exe', '--login' }
+	}
+	-- {
+	-- 	label = 'WSL',
+	-- 	domain = { DomainName = 'WSL:Ubuntu' },
+	-- 	cwd = '~', -- For some reason, doesn't seem to work to infer CWD from current pane...
+	-- },
+}
+
+config.default_domain = "WSL:Ubuntu"
 --config.treat_east_asian_ambiguous_width_as_wide = true
 -- and finally, return the configuration to wezterm
 return config

@@ -31,5 +31,7 @@ user_pref("sidebar.position_start", false);
 user_pref("signon.rememberSignons", false);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.enabled", false);
+// https://wiki.mozilla.org/Media/block-autoplay
+user_pref("media.autoplay.blocking_policy", 2);
 
 
