@@ -3,7 +3,7 @@
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("browser.aboutConfig.showWarning", false);
 user_pref("browser.cache.disk.enable", false);
-user_pref("browser.download.always_ask_before_handling_new_types", true);
+// user_pref("browser.download.always_ask_before_handling_new_types", true);
 user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 // user_pref("browser.startup.homepage", "about:home");
 user_pref("browser.startup.homepage_override.mstone", "ignore");
