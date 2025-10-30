@@ -7,7 +7,7 @@
   "copyFormatting": "none",
   "copyOnSelect": false,
   "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
-  "disabledProfileSources": ["Windows.Terminal.Wsl", "Windows.Terminal.Azure"],
+  "disabledProfileSources": ["Windows.Terminal.Azure"],
   "keybindings": [
     {
       "id": "Terminal.CopyToClipboard",
@@ -57,32 +57,10 @@
         "source": "Windows.Terminal.PowershellCore"
       },
       {
-        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-        "hidden": false,
-        "name": "Azure Cloud Shell",
-        "source": "Windows.Terminal.Azure"
-      },
-      {
-        "guid": "{4a04b435-e7ad-53a5-bfe5-a87203cc7d78}",
-        "hidden": true,
-        "name": "Ubuntu",
-        "pathTranslationStyle": "wsl",
-        "source": "Microsoft.WSL"
-      },
-      {
         "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
-        "hidden": true,
-        "icon": null,
-        "name": "Ubuntu",
-        "pathTranslationStyle": "wsl",
-        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
-      },
-      {
-        "commandline": "%SystemRoot%\\System32\\wsl.exe -d Ubuntu --cd ~ tmux attach || tmux",
-        "guid": "{c5ff573c-29db-473f-a2ae-a97ede44fe05}",
         "hidden": false,
-        "name": "Ubuntu (tmux)",
-        "pathTranslationStyle": "wsl"
+        "name": "Ubuntu",
+        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
       }
     ]
   },

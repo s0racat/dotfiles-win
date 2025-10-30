@@ -45,5 +45,13 @@
         }
       ]
     }
+  ],
+
+  "ignore_rules": [
+    {
+      "kind": "Exe",
+      "id": "VirtualBox.exe",
+      "matching_strategy": "Equals"
+    }
   ]
 }

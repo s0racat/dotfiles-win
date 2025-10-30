@@ -28,6 +28,8 @@ shape = "Block"
 
 [env]
 TERM = "alacritty"
+_ALACRITTY = "true"
+WSLENV = "_ALACRITTY"
 
 [font]
 size = 13
@@ -472,8 +474,8 @@ key = "NumpadSubtract"
 mods = "Control"
 
 [terminal.shell]
-program = "wsl.exe"
-args = [ "--cd", "~", "sh", "-c", "tmux attach || tmux new-session"]
+program = "ubuntu.exe"
+#args = [ "--cd", "~"]
 
 
 [window]
