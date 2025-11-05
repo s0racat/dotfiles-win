@@ -19,10 +19,9 @@ function Prompt {
         Remove-Item ("Alias:" + $_) -Force
     }
 }
+$env:Path = $env:path + ";$env:USERPROFILE\scoop\apps\git\current\usr\bin"
+$env:LESS = "-FRi"
 
-function less {
-    & "$env:userprofile\scoop\apps\git\current\usr\bin\less.exe" -R @Args
-}
 function ga { git add $args }
 function gc { git commit $args }
 function gd { git diff $args }
