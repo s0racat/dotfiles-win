@@ -33,5 +33,6 @@ user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("toolkit.telemetry.enabled", false);
 // https://wiki.mozilla.org/Media/block-autoplay
 user_pref("media.autoplay.blocking_policy", 2);
-
+user_pref("browser.cache.memory.capacity", 491520);  
+user_pref("browser.cache.memory.max_entry_size", 10240);
 
