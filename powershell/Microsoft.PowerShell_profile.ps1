@@ -41,3 +41,4 @@ function rm {
         Remove-Item $Path
     }
 }
+function open { rundll32.exe url.dll,FileProtocolHandler $args }
