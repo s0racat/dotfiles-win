@@ -52,6 +52,11 @@
       "kind": "Exe",
       "id": "VirtualBox.exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "kind":"Exe",
+      "id":"obs64.exe",
+      "matching_strategy":"Equals"
     }
   ]
 }
